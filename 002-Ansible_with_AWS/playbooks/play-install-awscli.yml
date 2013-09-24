@@ -1,0 +1,8 @@
+---
+- name: Install AWS CLI
+  user: ubuntu
+  sudo: True
+  hosts: all
+  tasks:
+    - include: install-awscli.yml
+
