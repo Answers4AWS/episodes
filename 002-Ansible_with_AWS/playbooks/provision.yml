@@ -9,7 +9,6 @@
         name: ep2
         description: Access to the Episode2 servers
         region: us-west-2
-        vpc_id: vpc-551b523d
         rules:
           - proto: tcp
             from_port: 22
@@ -24,7 +23,6 @@
         group: ep2
         instance_type: m1.small
         image: ami-8635a9b6
-        vpc_subnet_id: subnet-941b52fc
         count: 2
         wait: yes
       register: ec2
@@ -49,4 +47,4 @@
   user: ubuntu
   sudo: True
   tasks:
-    
+    - include: tasks/install-awscli.yml

@@ -4,5 +4,5 @@
   sudo: True
   hosts: all
   tasks:
-    - include: install-awscli.yml
+    - include: tasks/install-awscli.yml
 
